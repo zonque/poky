@@ -71,6 +71,8 @@ python do_package_prepend() {
 
 B = "${S}/build.${HOST_SYS}.${TARGET_SYS}"
 
+BUILD_CFLAGS += "-fcommon"
+
 EXTRA_OECONF = "--program-prefix=${TARGET_PREFIX} \
                 --disable-werror \
                 --enable-deterministic-archives \

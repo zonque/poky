@@ -17,6 +17,7 @@ inherit cmake distutils3-base
 
 DEPENDS += "libxml2 expat libcheck"
 
+BUILD_CFLAGS += "-fcommon"
 EXTRA_OECMAKE = " -DPYTHON_INSTALL_DIR=${PYTHON_SITEPACKAGES_DIR} -DPYTHON_DESIRED=3"
 OECMAKE_SOURCEPATH = "${S}/libcomps"
 

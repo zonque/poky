@@ -15,6 +15,8 @@ INSANE_SKIP_${PN}-dbg += "libdir"
 
 PROVIDES += "virtual/fakeroot"
 
+BUILD_CFLAGS += "-fcommon"
+
 MAKEOPTS = ""
 MAKEOPTS_class-native = "'RPATH=-Wl,--rpath=XORIGIN/../../../sqlite3-native/usr/lib/'"
 

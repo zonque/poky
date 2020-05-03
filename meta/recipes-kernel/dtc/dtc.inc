@@ -10,7 +10,8 @@ SRC_URI = "git://git.kernel.org/pub/scm/utils/dtc/dtc.git \
            "
 UPSTREAM_CHECK_GITTAGREGEX = "v(?P<pver>\d+(\.\d+)+)"
 
-EXTRA_OEMAKE='NO_PYTHON=1 PREFIX="${prefix}" LIBDIR="${libdir}" DESTDIR="${D}"'
+EXTRA_CFLAGS += "-fcommon"
+EXTRA_OEMAKE='NO_PYTHON=1 PREFIX="${prefix}" LIBDIR="${libdir}" DESTDIR="${D}" EXTRA_CFLAGS="${EXTRA_CFLAGS}"'
 
 inherit pkgconfig
 
