@@ -1,0 +1,14 @@
+Add -fcommon to CFLAGS to allow compilation wuth gcc 10.
+
+Signed-off-by: Daniel Mack <daniel@zonque.org>
+===================================================================
+--- a/mk/lib.mk	2020-05-03 08:53:38.912321111 +0200
++++ b/mk/lib.mk	2020-05-03 08:53:49.581258131 +0200
+@@ -50,6 +50,7 @@
+ WARNFLAGS = $(GCCWARN) -Wpointer-arith -Wwrite-strings -Wstrict-prototypes -Winline
+ 
+ CFLAGS  = $(OPTFLAGS) $(REQFLAGS) $(WARNFLAGS) $(LIBFLAGS)
++CFLAGS += -fcommon
+ 
+ ifeq ($(FWCLASS),EFI)
+ CFLAGS += -mno-red-zone

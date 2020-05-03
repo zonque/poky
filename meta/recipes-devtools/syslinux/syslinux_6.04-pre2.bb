@@ -11,6 +11,7 @@ PV = "6.04-pre2"
 
 SRC_URI = "https://www.zytor.com/pub/syslinux/Testing/6.04/syslinux-${PV}.tar.xz \
            file://syslinux-remove-clean-script.patch \
+           file://syslinux-fcommon.patch \
            file://0001-linux-syslinux-support-ext2-3-4-device.patch \
            file://0002-linux-syslinux-implement-open_ext2_fs.patch \
            file://0003-linux-syslinux-implement-install_to_ext2.patch \
